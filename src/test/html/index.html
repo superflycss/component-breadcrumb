@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% import "@superflycss/component-test/TestHead.njk" as TestHead %}
+{% import "@superflycss/component-test/TestHeader.njk" as TestHeader %}
+{% import "@superflycss/component-test/TestTemplate.njk" as Test %}
+
+{{ TestHead.component( 'Breadcrumb' ) }}
+
+<body>
+
+{{ TestHeader.component( 'Breadcrumb' ) }}
+
+<!--START TEST 1-->
+
+{% set when1 %}
+<ul>
+  <li>
+<code class="u-text-color-md-pink-400">
+BreadcrumbContainer</code>
+  </li>
+  <li>
+<code class="u-text-color-md-pink-400">
+Breadcrumb</code>
+  </li>
+  <li>
+<code class="u-text-color-md-pink-400">
+onActive</code>
+  </li>
+</ul>
+are applied to the first anchor.  
+{% endset %}
+{% call Test.component( 'Breadcrumb', when1, 'The breadcrumb is rendered.' ) %}
+<nav aria-label="breadcrumb" 
+    class="BreadcrumbContainer">
+  <a  
+    href="#"
+    aria-current="page" 
+    class="Breadcrumb onActive" aria-current="page">Home</a>
+</nav>
+{% endcall %}
+
+
+{% set when1 %}
+<ul>
+  <li>
+<code class="u-text-color-md-pink-400">
+BreadcrumbContainer</code>
+  </li>
+  <li>
+<code class="u-text-color-md-pink-400">
+Breadcrumb</code>
+  </li>
+  <li>
+<code class="u-text-color-md-pink-400">
+onActive</code>
+  </li>
+</ul>
+are applied to the second anchor.  
+{% endset %}
+{% call Test.component( 'Breadcrumb', when1, 'The breadcrumb path is rendered.' ) %}
+<nav aria-label="Breadcrumb" class="BreadcrumbContainer">
+  <a  
+    href="#"
+    class="Breadcrumb" 
+    aria-current="page">Home</a>
+  <a  
+    href="/users"
+    aria-current="page" 
+    class="Breadcrumb onActive" 
+    aria-current="page">Users</a>
+</nav>
+{% endcall %}
+</body>
+</html>

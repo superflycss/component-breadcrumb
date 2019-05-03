@@ -1,0 +1,17 @@
+.BreadcrumbContainer {
+  font-family: inherit;
+  background-color: inherit;
+  color: inherit;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Breadcrumb:not(:first-child)::before {
+  content: "/";
+  padding: 0 5px;
+}
+
+.Breadcrumb.onActive {
+  color: #4d545a;
+  text-decoration: none;
+}

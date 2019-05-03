@@ -1,0 +1,36 @@
+:root {
+  --BreadcrumbContainer-background-color: inherit;
+  --BreadcrumbContainer-text-color: inherit;
+  --BreadcrumbContainer-border-radius: inherit;
+  --BreadcrumbContainer-font-family: inherit;
+  --BreadcrumbContainer {
+    font-family: var(--BreadcrumbContainer-font-family);
+    background-color: var(--BreadcrumbContainer-background-color);
+    color: var(--BreadcrumbContainer-text-color);
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.BreadcrumbContainer {
+    @apply(--BreadcrumbContainer);
+}
+
+:root {
+  --Breadcrumb-separator: "/";
+  --Breadcrumb-padding: 0 5px;
+}
+
+.Breadcrumb:not(:first-child)::before {
+  content: var(--Breadcrumb-separator);
+  padding: var(--Breadcrumb-padding);
+}
+
+:root {
+  --Breadcrumb_onActive-color: #4d545a;
+}
+
+.Breadcrumb.onActive {
+  color: var(--Breadcrumb_onActive-color);
+  text-decoration: none;
+}

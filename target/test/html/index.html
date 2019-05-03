@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Tests for @superflycss/component-Breadcrumb</title>
+  <link href="../css/index.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+
+  <header class="Header--column">
+    <h1 class="Display--fs400fw700">Component Breadcrumb</h1>
+    <a class="Header_link" href="https://github.com/superflycss/component-Breadcrumb/">Github</a>
+  </header>
+
+
+<!--START TEST 1-->
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Breadcrumb</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<ul>
+  <li>
+<code class="u-text-color-md-pink-400">
+BreadcrumbContainer</code>
+  </li>
+  <li>
+<code class="u-text-color-md-pink-400">
+Breadcrumb</code>
+  </li>
+  <li>
+<code class="u-text-color-md-pink-400">
+onActive</code>
+  </li>
+</ul>
+are applied to the first anchor.  
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"breadcrumb"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"BreadcrumbContainer"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">aria-current</span>=<span class="hljs-string">"page"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Breadcrumb onActive"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The breadcrumb is rendered.</div>
+     <div class="TestRender">
+
+<nav aria-label="breadcrumb" class="BreadcrumbContainer">
+  <a href="#" aria-current="page" class="Breadcrumb onActive">Home</a>
+</nav>
+
+      </div>      
+    </div>
+  </div>
+
+
+
+
+
+  <div class="TestHeader ">
+    <span class="TestCounter"></span>
+    <span class="TestComponent">Breadcrumb</span>
+  </div>
+  <div class="TestContainer">
+    <div class="TestInput">
+      <div class="TestWhen "></div>
+      <div class="TestDescription ">
+<ul>
+  <li>
+<code class="u-text-color-md-pink-400">
+BreadcrumbContainer</code>
+  </li>
+  <li>
+<code class="u-text-color-md-pink-400">
+Breadcrumb</code>
+  </li>
+  <li>
+<code class="u-text-color-md-pink-400">
+onActive</code>
+  </li>
+</ul>
+are applied to the second anchor.  
+</div>
+      <pre class="TestMarkup ">        <code class="html">         
+
+<span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Breadcrumb"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"BreadcrumbContainer"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Breadcrumb"</span> <span class="hljs-attr">aria-current</span>=<span class="hljs-string">"page"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/users"</span> <span class="hljs-attr">aria-current</span>=<span class="hljs-string">"page"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Breadcrumb onActive"</span>&gt;</span>Users<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+
+       </code>
+     </pre>
+     </div>
+    <!--END TEST INPUT-->
+     <div class="TestOutput">
+      <div class="TestThen "></div>
+      <div class="TestDescription">The breadcrumb path is rendered.</div>
+     <div class="TestRender">
+
+<nav aria-label="Breadcrumb" class="BreadcrumbContainer">
+  <a href="#" class="Breadcrumb" aria-current="page">Home</a>
+  <a href="/users" aria-current="page" class="Breadcrumb onActive">Users</a>
+</nav>
+
+      </div>      
+    </div>
+  </div>
+
+
+</body></html>
